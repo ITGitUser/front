@@ -1,0 +1,20 @@
+.WrapperButtonAdd{
+    margin: 10px 5px 0 5px;
+
+    button{
+        display: block;
+        width: 100%;
+        min-width: 250px;
+        padding:10px;
+        border:  1.5px solid rgb(240,239,242);
+        border-radius: 5px;
+        background-color: #fff;
+        color: rgb(129, 149, 228);
+        font-weight: bold;
+
+    }
+    button:hover{
+        cursor: pointer;
+        color: rgb(6, 50, 228);
+    }
+}

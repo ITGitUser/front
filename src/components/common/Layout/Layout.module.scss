@@ -1,0 +1,29 @@
+.layoutWrapper{
+    display: flex;
+    flex-direction: row;
+    .mainMenu{
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      width: 70px;
+      height: 100vh;
+      position: sticky;
+      top:0;
+      border-right: 2px solid rgb(240,239,242);
+      div{
+        padding:20px;
+      }
+      .mainButton{
+        display: flex;
+        flex-direction: column;
+        button{
+            margin-bottom: 10px;
+        }
+      }
+    }
+    .wrapperContent{
+        width:100vw;
+        height: auto;
+    }
+}

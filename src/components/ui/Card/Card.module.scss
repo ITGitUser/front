@@ -1,0 +1,70 @@
+@import '../../../scss/variables';
+
+.wrapperCard{
+    margin: 10px 5px;
+    display: block;
+    min-width: 200px;
+    border-radius: 5px;
+    background-color: rgb(255, 255, 255);
+    border: 1.5px solid rgb(240,239,242);
+    .cardBody{
+        margin:0;
+        padding: 0 15px;
+        border-bottom: 1.5px solid rgb(240,239,242);
+        p{
+            font-size:13px;
+            color: rgb(154,156,158) ;
+        }
+        .cardHeaderBody>p{
+            font-size: 14px;
+            font-weight: bold;
+            color: rgb(22,38,55);
+        }
+    }
+    .cardHeaderInfo{
+        margin:0;
+        padding:10px 5px 0 10px;
+        display: flex;
+        justify-content: space-between;
+        p{
+            margin:0;
+            padding:5px 10px; 
+            display: inline-block;
+            background-color: rgb(255,241,214);
+            border-radius: 15px;
+            font-size: 13px;
+            color: rgb(230,150,52);
+            font-weight: bold;
+        }
+        
+
+    }
+    .cardFooter{
+      padding: 15px;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+        div{
+          display: flex;
+            button{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border: none;
+                background-color: #fff;
+                color: rgb(154,156,158);
+              img{
+                margin-right: 2px;
+                opacity: 0.4;
+              }
+            }
+            button:hover{
+                cursor: pointer;
+                color: rgb(54, 56, 58);
+                img{
+                    opacity: 0.9;
+                }
+            }
+        }
+    }
+}

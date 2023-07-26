@@ -1,0 +1,17 @@
+
+.projectsWrapper{
+    display: flex;
+    flex-direction: row;
+
+    .projectsMenu{
+        width: 190px;
+        height: 100vh;
+        border-right: 2px solid rgb(240,239,242);
+        position: sticky;
+        top:0;
+        right: 0;
+    }
+    .projectsContent{
+        width: 100%;
+    }
+}

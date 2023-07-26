@@ -1,0 +1,13 @@
+.ButtonInfo{
+    border: none;
+    background-color: transparent;
+    img{
+        opacity: 0.5;
+      }
+}
+.ButtonInfo:hover{
+    cursor: pointer;
+    img{
+        opacity: 0.9;
+    }
+}
