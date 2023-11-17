@@ -1,7 +1,4 @@
-[data-rbd-drag-handle-context-id=":r1:"]{
-    border: 1px dashed #868686;
-    border-radius: 3px;
-}
+
 .HeaderBoard{
     display: flex;
     flex-direction: row;
@@ -13,12 +10,21 @@
         display: flex;
         flex-direction: column;
         justify-content: space-between;
+        .menuButton{
+            button{
+                padding:20px;
+            }
+        }
     }
     .menu2{
         display: flex;
         flex-direction: column;
         justify-content: space-around;
         align-items: flex-end;
+        .wrapperButtonAddAndUsers{
+            display: flex;
+            align-items: center;
+        }
         .ButtonAddMembers{
             padding:0 20px;
             div{
@@ -26,12 +32,26 @@
             }
      
         }
+        .buttonAddColumn{
+            background-color: #fff;
+            border: 1px dashed rgba(54, 94, 253, 0.9);
+            border-radius: 5px;
+            padding:8px;
+            margin-right: 20px;
+            width: 170px;
+            color:rgba(54, 94, 253, 0.9);
+        }
+        .buttonAddColumn:hover{
+            cursor: pointer;
+            border: 1px solid rgba(54, 94, 253, 0.9);
+        }
     }
     .ButtonAddMembers>div>button{
         background-color: rgba(54, 94, 253, 0.9);
         color: #fff;
         font-weight: normal;
         min-width: 170px ;
+        padding:10px;
     }
     .ButtonAddMembers>div>button:hover{
         background-color: rgba(54, 94, 253, 0.6);
@@ -40,7 +60,7 @@
         button{
         border:none;
         background-color: transparent;
-        padding:15px;
+        padding: 8px;
         font-weight: bold;
         }
         button:hover{
@@ -54,6 +74,26 @@
     }
     div>.viewButton{
       padding: 0 20px;
+      display: inline-flex;
+      button{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        svg{
+            margin-right: 7px;
+        }
+        
+      }
+      button:nth-child(2){
+        svg{
+            opacity: 0.5;
+        }
+        
+    }
+    }
+    .viewButton>:nth-child(2){
+        text-decoration: line-through;
+        color: #a7a5a5 !important;
     }
     div>.viewButton>.active{
         border-radius:10px;
@@ -64,16 +104,14 @@
 }
 
 .wrapperCards{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    width: 100% !important;
     padding: 0 5px;
     background-color: rgb(247,247,247);
-
-    
-
 }
 .wrapperBoard{
+    div.wrapperDragableCard{
+        width: 100%;
+    }
     .noneContent{
         width: 100%;
         height: 100vh;
@@ -96,4 +134,22 @@ margin:0;
     }
 }
 }
+}
+.buttonConfirm{
+        border:none;
+        border-radius: 5px;
+        margin: 20px 0 0 0;
+        padding: 10px;
+        color: #fff;
+        width: 100%;
+        font-weight: bold;
+    &:hover{
+        cursor: pointer;
+    }
+    
+        background-color: rgba(19, 190, 158, 0.5);
+    
+    &:hover{
+        background-color: rgba(19, 190, 158, .9);
+    }
 }

@@ -1,0 +1,19 @@
+.wrapperInput{
+    position:relative;
+    width: 200px;
+    
+    input{
+        padding: 10px 0px 10px 28px;
+    border:none;
+    border-radius: 5px;
+    background-color: rgb(247, 247, 247);
+    width: 100%;
+    }
+    svg{
+        width: 20px;
+        height: 20px;
+        position: absolute;
+        left:5px;
+        top:7px;
+    }
+}

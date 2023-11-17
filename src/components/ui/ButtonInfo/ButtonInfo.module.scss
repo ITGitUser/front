@@ -1,3 +1,7 @@
+.wrapperButtonInfo{
+    position:relative;
+    display: inline-block;
+}
 .ButtonInfo{
     border: none;
     background-color: transparent;
@@ -10,4 +14,50 @@
     img{
         opacity: 0.9;
     }
+}
+
+.DropDownList{
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    min-width: 130px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    border-radius: 5px;
+    left:-90px;
+    overflow: hidden;
+    button{
+        border:none;
+        padding: 5px;
+        background-color: #fff;
+    }
+    button:hover{
+        cursor: pointer;
+        color:#fff;
+        background-color: rgba(52, 95, 252, 0.3);
+        
+    }
+    button:disabled:hover{
+        cursor: default;
+        background-color: rgba(144, 145, 146, 0.3) !important;
+    
+}
+   
+}
+.triangle {
+    position: absolute;
+    top: 24px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-bottom: 8px solid #fff;
+    z-index: 2;
+  }
+.DropDownListVisible{
+    display:flex;
+    flex-direction: column;
+    
 }

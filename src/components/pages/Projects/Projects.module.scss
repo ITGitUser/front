@@ -4,14 +4,75 @@
     flex-direction: row;
 
     .projectsMenu{
-        width: 190px;
+        flex: 0 0 220px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
         height: 100vh;
         border-right: 2px solid rgb(240,239,242);
         position: sticky;
         top:0;
-        right: 0;
-    }
-    .projectsContent{
-        width: 100%;
+        overflow-y: auto;
+        
+        div>.activeButtonProjectsMenu{
+            background-color: #365EFD !important;
+            color: #fff;
+        }
+        .WrapperProjectButton{
+            display: flex;
+            flex-direction: column;
+            padding:10px 15px 10px 20px;
+            
+            .containerProjectButton{
+                height: 100px;
+                overflow-y: auto;
+                padding-right: 5px;
+            }
+            span{
+                font-size: 21px;
+                font-weight: bold;
+                margin: 0 0 15px 0;
+            }
+            button{
+                display: flex;
+                background-color: #fff;
+                border: 1px solid rgb(240, 239, 242);
+                justify-content: space-between;
+                align-items: center;
+                border-radius: 5px;
+                margin-bottom: 10px;
+                text-align: left;
+                padding:5px;
+                width: 100%;
+                button{
+                    border:none;
+                    background-color: transparent;
+                    margin:0;
+                    padding:0;
+                    
+                }
+            }
+            button:hover{
+                cursor: pointer;
+            }
+        }
+        .buttonAddProject{
+            padding:20px;
+
+            button{
+                background-color: transparent;
+                border: 1px dashed #365EFD;
+                border-radius: 5px;
+                padding: 10px;
+                width: 100%;
+                color: #365EFD;
+            }
+            button:hover{
+                cursor: pointer;
+                border: 1px solid #365EFD;
+                ;
+            }
+        }
+        
     }
 }

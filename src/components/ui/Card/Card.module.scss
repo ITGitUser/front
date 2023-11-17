@@ -2,8 +2,6 @@
 
 .wrapperCard{
     margin: 10px 5px;
-    display: block;
-    min-width: 200px;
     border-radius: 5px;
     background-color: rgb(255, 255, 255);
     border: 1.5px solid rgb(240,239,242);
@@ -30,21 +28,54 @@
             margin:0;
             padding:5px 10px; 
             display: inline-block;
-            background-color: rgb(255,241,214);
+            /*background-color: rgb(255,241,214);*/
             border-radius: 15px;
             font-size: 13px;
-            color: rgb(230,150,52);
+           /* color: rgb(230,150,52);*/
             font-weight: bold;
         }
         
 
     }
+   
+    .cardFotterModal{
+        padding: 15px 0;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+          div.wrapperCardFooterAvatar, div.wrapperCardFotterInfo{
+            display: flex;
+              button{
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  border: none;
+                  background-color: #fff;
+                  color: rgb(154,156,158);
+                img{
+                  margin-right: 2px;
+                  opacity: 0.4;
+                }
+              }
+              button:hover{
+                  cursor: pointer;
+                  color: rgb(54, 56, 58);
+                  img{
+                      opacity: 0.9;
+                  }
+              }
+          }
+          .WrapperCardDateInfo{
+              font-size: 15px;
+              color: rgb(154,156,158);
+          }
+      }
     .cardFooter{
       padding: 15px;
       display: flex;
       flex-direction: row;
       justify-content: space-between;
-        div{
+        div.wrapperCardFooterAvatar, div.wrapperCardFotterInfo{
           display: flex;
             button{
                 display: flex;
@@ -66,5 +97,43 @@
                 }
             }
         }
+        .WrapperCardDateInfo{
+            font-size: 15px;
+            color: rgb(154,156,158);
+        }
     }
+}
+.headerModalWindowAboutCard{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    .headerLabel{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin-bottom: 15px;
+    }
+    
+    div>p{
+        margin: 0;
+        padding: 7px 10px;
+        border-radius: 15px;
+        font-size: 15px;
+        font-weight: bold;
+    }
+    
+}
+.wrapperSubTasks>div>form>div{
+display: block;
+width: max-content;
+padding: 5px;
+border:2px solid rgb(240, 239, 242);
+border-radius: 5px;
+color:rgb(104, 104, 105);
+margin:5px 0;
+
+}
+.active{
+    background-color: red;
 }

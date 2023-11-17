@@ -1,0 +1,28 @@
+.wrapperAvatarUsers{
+    display: flex;
+    align-items: center;
+    div{
+        margin-right:-15px;
+        background-color: #fff;
+    }
+    .wrapperAvatarUsersView{
+        width: 32.5px;
+        height: 32.5px;
+        border-radius: 50%;
+        border: 1px solid #fff;
+    }
+    .wrapperAvatarUsersMore {
+        width: 32.5px;
+        height: 32.5px;
+        border-radius: 50%;
+        border: 1px solid rgb(98,111, 164);
+        background-color: rgb(232,240,251);
+        font-weight: bold;
+        color:rgb(98,111, 164);
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+     
+    }
+}

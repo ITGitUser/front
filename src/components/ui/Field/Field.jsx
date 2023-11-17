@@ -1,7 +1,7 @@
 import React from 'react'
 import styles from './Field.module.scss'
 
-const Field = ( {placeholder, value, onChange, type ='text', typeInput, required}) => {
+const Field = ( {placeholder, value, onChange, type ='text', typeInput, required, isFocused=false}) => {
     return (
         <div className={styles.wrapperInput}>
             {(typeInput!=='textarea')?<input 
@@ -11,6 +11,7 @@ const Field = ( {placeholder, value, onChange, type ='text', typeInput, required
                   onChange={onChange}
                   className={styles.input}
                   required={required}
+                  autoFocus={isFocused}
                   />:<textarea 
       			placeholder={placeholder}
                   type={type}
@@ -18,6 +19,7 @@ const Field = ( {placeholder, value, onChange, type ='text', typeInput, required
                   onChange={onChange}
                   className={styles.input}
                   required={required}
+                  autoFocus={isFocused}
                   />}
         </div>
     );

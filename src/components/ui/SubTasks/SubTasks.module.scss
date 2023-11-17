@@ -1,0 +1,23 @@
+.wrapperSubTasks{
+    width: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 5px;
+    border: 2px solid rgb(240, 239, 242);
+    padding:3px;
+    margin-bottom: 15px;
+    span{
+        color: #9a9c9e;
+        font-size: 15px;
+        font-weight: bold;
+    }
+}
+.activeWrapperSubTasks{
+    border: 2px solid #82beb3;
+    background-color: rgba(85, 255, 170, 0.2);
+    span{
+        color: #6caa9f;
+    }
+}

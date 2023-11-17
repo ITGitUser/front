@@ -1,31 +1,54 @@
 import Layout from "../../common/Layout/Layout.jsx";
 import Header from '../../common/Header/Header.jsx';
-import Board from '../../pages/Board/Board.jsx';
 import styles from './Projects.module.scss'
 import {DataPro} from '../data.js';
-import { useState } from "react";
+import cn from 'classnames';
+import { useNavigate, useParams } from "react-router-dom";
+import Icons from "../../common/Layout/LayoutSVG.jsx";
+import AllTime from "./AllTime.jsx";
+import Team from "./Team.jsx";
 
-const Projects = () =>{
- const[activeProject, setActiveProject]=useState();
-
-
+const Projects = ({children}) =>{
+    const idParam=useParams();
+ const navigate = useNavigate();
+const drawProjectsButton=()=>{
+   return <div className={styles.WrapperProjectButton}>
+    <span>Проекты</span>
+    <div className={styles.containerProjectButton}>
+   {DataPro.map((project, index)=>(
+        <button 
+        key={index} 
+        className={cn({
+            [styles.activeButtonProjectsMenu]:project.idProject === idParam.id
+                })}
+        onClick={()=>{navigate('../projects/'+project.idProject)}}>{project?.nameProject}
+        <div className={styles.ButtonInfo} onClick={()=>{console.log('he3')}}>
+    <Icons name="info" color={(project.idProject === idParam.id)?"#fff":"#c1bfbf"} size="24px"/>
+    </div>
+        </button>
+     ))}
+     </div>
+     </div>
+};
     return (
-       
+
         <Layout>
              
             <div className={styles.projectsWrapper}>
             <div className={styles.projectsMenu}>
-                <h2>Проекты</h2>
-                <div><button onClick={()=>{setActiveProject(DataPro[0])}}>{DataPro[0]?.nameProject}</button></div>
-                <div></div>
-                <div></div>
+                
+                {drawProjectsButton()}
+                <Team projectID={idParam.id}></Team>
+                <AllTime></AllTime>
+                <div className={styles.buttonAddProject}><button>+ Добавить проект</button></div>
             </div>
-            <div className={styles.projectsContent}>
+            <div style={{width:'100%'}} className={styles.projectsContent}>
                 <Header/>
-                <Board bData={activeProject}/>
+                {children?children:<h2 style={{color: 'gray', width: "100%", textAlign: "center" }}>Пожалуйста, выберите проект</h2>}
             </div>
             </div>
             </Layout>
+
         
     );
 };

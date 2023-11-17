@@ -5,11 +5,54 @@ display: flex;
 align-items: center;
 justify-content: space-between;
 height: 70px;
+padding: 0 20px;
 border-bottom: 2px solid rgb(240,239,242);
->button{
+div>button{
     background-color: transparent;
     border: none;
     outline: none;
     cursor: pointer;
-};
+}
+
+.infoWrpaper{
+    display: flex;
+    align-items: center;
+    .wrapperButtonProfile{
+        display: flex;
+        align-items: center;
+        div>div{
+            margin-right: 5px;
+        }
+        
+            p{
+                font-weight: bold;
+            }
+        
+    }
+    
+    .buttonNotific{
+        position: relative;
+    }
+    .buttonNotific:before{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        content: attr(data-count);
+        background-color: rgb(248, 94, 86);;
+        color:#fff;
+        border-radius: 50%;
+        border:1px solid #fff;
+        right: 0em;
+        padding: 2px;
+        top:-0.5em;
+        width: 1.25em;
+        height: 1.25em;
+        font-size: 10px;
+        font-weight: bold;
+    }
+    .buttonNotific[data-count=""]:before{
+        display: none;
+    }
+}
 }

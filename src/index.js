@@ -1,9 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import reportWebVitals from './reportWebVitals';
-
+import styles from './scss/_variables.scss'
 import { QueryClient, QueryClientProvider } from 'react-query'
-import { ReactQueryDevtools} from 'react-query/devtools'
 import AppProvider from './providers/AppProviders';
 
 const queryClient = new QueryClient();
@@ -12,8 +11,8 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <QueryClientProvider client={queryClient}>   
-    <AppProvider/>
-    <ReactQueryDevtools initialIsOpen={false}/>
+    <AppProvider classNames={styles.App}/>
+    
     </QueryClientProvider>
   </React.StrictMode>
 );

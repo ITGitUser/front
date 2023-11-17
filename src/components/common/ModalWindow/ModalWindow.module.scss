@@ -13,11 +13,14 @@
    pointer-events: none;
     transition: 0.5s;
     .modalContent{
-        width: 40vw;
+        width: 35vw;
         height: auto;
         padding: 20px;
         border-radius: 20px;
         background-color: #fff;
+        h2{
+            margin:0;
+        }
     }
 }
 .modalWindowActive{
