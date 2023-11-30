@@ -8,7 +8,7 @@ const App = () => {
   // const {isAuth} = useAuth();
 
   return (
-    <BrowserRouter basename="/front">
+    <BrowserRouter basename="/">
       <Routes>
         {routes.map((route) => {
           return (
