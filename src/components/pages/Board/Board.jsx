@@ -56,6 +56,10 @@ const Board = () => {
       '[data-rfd-placeholder-context-id=":r0:"]'
     );
 
+    if (!elementDragableEnd) {
+      console.log(elementDropableAreaEnd);
+      return;
+    }
     elementDragableEnd.style.border = "1px dashed gray";
     elementDragableEnd.style.borderRadius = "10px";
     //логика для для отрисовки плэйсхолдера при перемещении между колонками
