@@ -8,7 +8,7 @@ const App = () => {
   // const {isAuth} = useAuth();
 
   return (
-    <BrowserRouter basename="/">
+    <BrowserRouter basename="/kanban-board">
       <Routes>
         {routes.map((route) => {
           return (
