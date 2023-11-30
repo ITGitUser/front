@@ -57,7 +57,12 @@ const Board = () => {
     );
 
     if (!elementDragableEnd) {
-      console.log(elementDropableAreaEnd);
+      console.log(elementDragableEnd);
+      console.log(
+        elementDropableAreaEnd.querySelector(
+          `[data-rfd-placeholder-context-id=":r0:"]`
+        )
+      );
       return;
     }
     elementDragableEnd.style.border = "1px dashed gray";
