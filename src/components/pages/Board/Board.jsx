@@ -44,16 +44,16 @@ const Board = () => {
       `[data-rfd-droppable-id="${idDropAreaEnd}"]`
     );
     const elementDragableEnd = elementDropableAreaEnd.querySelector(
-      '[data-rfd-placeholder-context-id=":`r0:"]'
+      `[data-rfd-placeholder-context-id=":r0:"]`
     );
     const elementDivIntoDragEnd = elementDropableAreaEnd.querySelectorAll(
-      '[data-rfd-draggable-context-id=":r0:"]'
+      `[data-rfd-draggable-context-id=":r0:"]`
     );
     const elementDropableAreaStart = document.querySelector(
       `[data-rfd-droppable-id="${idDropAreaStart}"]`
     );
     const elementDragableStart = elementDropableAreaStart.querySelector(
-      '[data-rfd-placeholder-context-id=":r0:"]'
+      `[data-rfd-placeholder-context-id=":r0:"]`
     );
 
     if (!elementDragableEnd) {
